@@ -2,7 +2,7 @@ import xarray as xr
 import numpy as np
 import time
 from netCDF4 import Dataset
-
+from 3D_Plumb_flux_module import plumb_flux
 
 
 in_file = "./data/Sept2019"
@@ -43,4 +43,5 @@ with Dataset(out_file, "w", format="NETCDF4") as f:
     f.source = "xarray + netCDF4"
 
 print(" Output written to", out_file)
+
 
